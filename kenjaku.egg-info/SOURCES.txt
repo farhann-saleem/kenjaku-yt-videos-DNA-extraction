@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+kenjaku/__init__.py
+kenjaku/cli.py
+kenjaku.egg-info/PKG-INFO
+kenjaku.egg-info/SOURCES.txt
+kenjaku.egg-info/dependency_links.txt
+kenjaku.egg-info/entry_points.txt
+kenjaku.egg-info/requires.txt
+kenjaku.egg-info/top_level.txt

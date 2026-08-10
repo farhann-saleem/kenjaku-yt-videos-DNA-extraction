@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: kenjaku
+Version: 0.1.0
+Summary: Style DNA Extractor CLI
+Requires-Python: >=3.9
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: Pillow
+Requires-Dist: pyyaml

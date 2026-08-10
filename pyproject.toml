@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kenjaku"
+version = "0.1.0"
+description = "Style DNA Extractor CLI"
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "Pillow",
+    "pyyaml"
+]
+
+[project.scripts]
+kj = "kenjaku.cli:main"
