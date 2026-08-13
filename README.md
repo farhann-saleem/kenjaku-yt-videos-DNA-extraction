@@ -25,10 +25,16 @@
 
 ## 🛠️ Installation
 
-You can install the `kenjaku` CLI globally straight from GitHub or locally in editable mode:
+You can easily install the `kenjaku` CLI globally straight from GitHub! 
 
+To install it so it works everywhere on your computer, run:
 ```bash
-# To install locally with editable mode (recommended for developers)
+pip install git+https://github.com/farhann-saleem/kenjaku-yt-videos-DNA-extraction.git --break-system-packages
+```
+*(If you use `pipx`, you can run `pipx install git+https://github.com/farhann-saleem/kenjaku-yt-videos-DNA-extraction.git`)*
+
+If you are modifying the code locally, use editable mode:
+```bash
 pip install -e . --break-system-packages
 ```
 
