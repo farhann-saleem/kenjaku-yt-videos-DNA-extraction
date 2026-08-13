@@ -4,39 +4,32 @@
   <p align="center"><i>Style DNA Extractor & Brain Snatching Domain</i></p>
   
   [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-  [![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-orange.svg?style=for-the-badge)](https://ai.google.dev)
+  [![Gemini](https://img.shields.io/badge/Gemini-1.5%20Flash-orange.svg?style=for-the-badge)](https://ai.google.dev)
 </div>
 
 ---
 
 > *"I will take over this body and its techniques."* — Kenjaku
 
-**kenjaku** is a fully-automated CLI tool that extracts the "DNA" of a viral video's editing style and binds it to a JSON preset for the Kamui renderer. 
+**kenjaku** is a fully-automated, highly visual CLI tool that acts as the "Brain" for video automation pipelines. It uses Gemini's native multi-modal capabilities (simultaneous vision and audio processing) to extract the "DNA" of a viral video's editing style, or to analyze raw gameplay for automated editing.
 
-It handles automated yt-dlp downloading, Six Eyes Grid Processing, and ultra-fast pacing extraction using a highly redundant key-rotation strategy across Gemini, OpenRouter, and Groq APIs.
+## 🌟 New Features
 
----
-
-## Setup & Infrastructure
-Read the **[SETUP.md](./SETUP.md)** file for a full guide on configuring your environment, understanding the rate-limit bypassing architecture, and setting up the rotating API keys.
-
----
-
-## Features
-
-- **Infinite Keys**: Automatically loads any `GEMINI_API_KEY_*`, `OPENROUTER_API_KEY`, or `GROQ_API_KEY` in your `.env` and rotates them dynamically to permanently bypass `429 Quota Exceeded` errors.
-- **Six Eyes Processing**: Slices reference videos into 5x5 grids and chunks audio dynamically for multi-modal VLM ingestion.
-- **DNA Extraction**: Spits out `_dna.json` containing the mathematically perfect anchor points, font styles, and pacing rules required to clone a video's style.
-- **Zero Cost Architecture**: Uses entirely free-tier inference APIs to deep-analyze 100+ videos without spending a single dollar.
+- **Beautiful Rich UI:** Live progress bars, spinning loaders, and elapsed-time tracking right in your terminal.
+- **Local & Remote Support:** Feed it a YouTube URL (auto-downloads via `yt-dlp`) or simply point it to a `local_path` on your hard drive.
+- **Smart Caching:** Automatically detects if a video has already been analyzed and skips execution to save your API tokens. Use `--no-cache` to force a rerun.
+- **Checkpointing:** If the API fails mid-extraction, Kenjaku saves the downloaded video locally and will resume exactly where it left off on the next run.
+- **Agent-Safe Error Handling:** Built with strict `try/except` blocks and standard exit codes (`sys.exit(1)`) so other AI coding agents can run it autonomously without getting stuck in loops.
 
 ---
 
-## Installation
+## 🛠️ Installation
 
-You can install the `kenjaku` CLI globally straight from GitHub:
+You can install the `kenjaku` CLI globally straight from GitHub or locally in editable mode:
 
 ```bash
-pip install git+https://github.com/farhann-saleem/kenjaku.git
+# To install locally with editable mode (recommended for developers)
+pip install -e . --break-system-packages
 ```
 
 Once installed, just navigate to an empty folder anywhere on your computer and run:
@@ -47,12 +40,13 @@ This will generate your `target.md` configuration file. You never have to touch 
 
 ---
 
-## Command Reference
+## 💻 Command Reference
 
 | Command | Description |
 |---------|-------------|
-| `kj init` | Initializes a `target.md` configuration file in your current directory. |
-| `kj extract` | **[AUTO]** Reads `target.md`, fetches the video via yt-dlp, performs Six Eyes Grid Analysis, and extracts the JSON DNA. |
+| `kj init` | Initializes a `target.md` configuration file. You can insert a YouTube URL or a Local File Path here. |
+| `kj extract` | **[AUTO]** Reads `target.md`, fetches/copies the video, runs Multi-Modal Gemini Analysis, and extracts the JSON DNA. |
+| `kj extract --no-cache` | Ignores any previous analysis files and forces a brand new API extraction. |
 
 ---
 

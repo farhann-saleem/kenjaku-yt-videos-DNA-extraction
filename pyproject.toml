@@ -11,7 +11,8 @@ dependencies = [
     "requests",
     "python-dotenv",
     "Pillow",
-    "pyyaml"
+    "pyyaml",
+    "rich"
 ]
 
 [project.scripts]

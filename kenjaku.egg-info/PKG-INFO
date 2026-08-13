@@ -7,3 +7,4 @@ Requires-Dist: requests
 Requires-Dist: python-dotenv
 Requires-Dist: Pillow
 Requires-Dist: pyyaml
+Requires-Dist: rich
